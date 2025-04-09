@@ -1,46 +1,28 @@
-# Getting Started with Create React App
+# GitHub Profile Analyzer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web application built with React and TypeScript that analyzes GitHub user profiles, displaying repositories and daily commit activity using the GitHub API.
 
-## Available Scripts
+## Demo
+Check out the live deployment: github-analyzer-git-main-bhavya-tanejas-projects-636ca9a5.vercel.app
+## How the Project is Made
+This project was developed step-by-step with the following process:
 
-In the project directory, you can run:
+- **Initial Setup**: Created a React application using Create React App with TypeScript support (`npx create-react-app github-analyzer --template typescript`).
+- **API Integration**: Implemented `githubService.ts` to fetch repository and commit data from the GitHub API using Axios, with interfaces (`Repository`, `CommitActivityWeek`, `CommitData`) to type the responses.
+- **UI Components**: Utilized custom UI components (`Input`, `Button`, `Card`, etc.) from a component library, styled with Tailwind CSS for a responsive layout.
+- **Chart Implementation**: Added a GitHub-style bar chart and a line chart for commit activity using Recharts, integrating it into `App.tsx` after resolving dependency conflicts with `--legacy-peer-deps`.
+- **Debugging**: Created `debugGithub.ts` to verify API functionality, logging repository and commit data for troubleshooting.
+- **Deployment**: Deployed to Vercel with a `vercel.json` configuration to handle TypeScript 5.8.3 and react-scripts 5.0.1 peer dependency issues using `npm install --legacy-peer-deps`.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Prerequisites
+- Node.js (version 14.x or later)
+- npm (comes with Node.js)
+- Git (optional, for version control)
+- A GitHub account (for API access, optional Personal Access Token)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Installation
+1. **Clone the Repository**:
+   - Clone the repo to your local machine:
+     ```bash
+     git clone https://github.com/Developer-Bhavya/github-analyzer.git
